@@ -20,20 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-        function scrambledString(element, scrambledEmail, positions) {
-            let unscrambledEmail = new Array(positions.length);
-            for (let i = 0; i < positions.length; i++) {
-                unscrambledEmail[positions[i] - 1] = scrambledEmail[i];
-            }
-            element.innerHTML = unscrambledEmail.join('');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            scrambledString(document.getElementById('email'), 'ms22268@iisermohali.ac.in'.split('').reverse().join(''), [27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
-            scrambledString(document.getElementById('email2'), 'milindsarkaryt@gmail.com'.split('').reverse().join(''), [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
-        });
-    </script>
+    <script src="scramble.js"></script>
     <meta name="author" content="Milind Sarkar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Milind Sarkar | Research Assistant@DiRAC,UW ">
@@ -61,10 +48,31 @@
                         </td>
                         <td style="padding:2.5%;width:60%;vertical-align:middle">
                             <p align="center" style="text-align:center">
-                                        <h1 style="text-align:center;"><name><p style="font-size: 60px;">Milind Sarkar</p></name></h1>
+                                        <!-- <h1 style="text-align:center">
+                                            <name>Milind Sarkar</name>
+                                        </h1> -->
+                                        <font size="9">Milind Sarkar</font><br>
                                         <small>Click on the email to unscramble.</small><br>
-                                        <b>Academic Email</b>: <span id="email" onclick="showEmail('email')">[Click to reveal]</span><br>
-                                        <b>Personal Email</b>: <span id="email2" onclick="showEmail('email2')">[Click to reveal]</span>
+                                        <b>Academic Email</b>:
+                                        <font id="email" style="display:inline;">
+                                            <noscript><i>Please enable Javascript to view</i></noscript>
+                                        </font>
+                                        <script>
+                                            emailScramble = new scrambledString(document.getElementById('email'),
+                                                'emailScramble', 'ni.ca.gtii@najnug.d',
+                                                [19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+                                        </script>
+                                        <br>
+
+                                        <b>Personal Email</b>:
+                                        <font id="email2" style="display:inline;">
+                                            <noscript><i>Please enable Javascript to view</i></noscript>
+                                        </font>
+                                        <script>
+                                            emailScramble2 = new scrambledString(document.getElementById('email2'),
+                                                'emailScramble2', 'moc.liamg@291akunahdg',
+                                                [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+                                        </script>
                             </p>
                             <p style="text-align:center">
                             &nbsp|&nbsp
