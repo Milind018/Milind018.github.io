@@ -20,7 +20,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="script.js" defer></script>
+    <script>
+        function scrambledString(element, scrambledEmail, positions) {
+            let unscrambledEmail = new Array(positions.length);
+            for (let i = 0; i < positions.length; i++) {
+                unscrambledEmail[positions[i] - 1] = scrambledEmail[i];
+            }
+            element.innerHTML = unscrambledEmail.join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            scrambledString(document.getElementById('email'), 'ni.ca.ilahomreesii@86225sm', [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+            scrambledString(document.getElementById('email2'), 'moc.liamg@tryraksdnilim', [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+        });
+    </script>
     <meta name="author" content="Milind Sarkar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Milind Sarkar | Research Assistant@DiRAC,UW ">
@@ -48,26 +61,18 @@
                         </td>
                         <td style="padding:2.5%;width:60%;vertical-align:middle">
                             <p style="text-align:center">
-                                <h1  style="text-align:center;"><name><p style="font-size: 60px;">Milind Sarkar</p></name></h1>
+                                        <h1 style="text-align:center;"><name><p style="font-size: 60px;">Milind Sarkar</p></name></h1>
                                         <small>Click on the email to unscramble.</small><br>
                                         <b>Academic Email</b>:
                                         <font id="email" style="display:inline;">
                                             <noscript><i>Please enable Javascript to view</i></noscript>
                                         </font>
-                                        <script>
-                                            scrambledString(document.getElementById('email'), 'emailScramble', 'ni.ca.ilahomreesii@86225sm', 
-                                                            [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
-                                        </script>
                                         <br>
 
                                         <b>Personal Email</b>:
                                         <font id="email2" style="display:inline;">
                                             <noscript><i>Please enable Javascript to view</i></noscript>
                                         </font>
-                                        <script>
-                                            scrambledString(document.getElementById('email2'), 'emailScramble2', 'moc.liamg@tryraksdnilim', 
-                                                            [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
-                                        </script>
                             </p>
                             <p style="text-align:center">
                             &nbsp|&nbsp
